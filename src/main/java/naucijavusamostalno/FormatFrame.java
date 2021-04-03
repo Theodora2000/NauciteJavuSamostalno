@@ -4,17 +4,20 @@ import  javax.swing.*;
 
 public class FormatFrame  extends JFrame{
 
-    String[] formats = {"Atom", "RSS 0.92","RSS 1.0","RSS 2.0"};
-    JComboBox<String> formatBox = new JComboBox<String>(formats);
+    String[] subs = {"Burningbrid", "Freeform Goodness", "Inessential", "Manton.org"};
+    JList<String> subList = new JList<String>(subs);
 
     public FormatFrame(){
-        super("Choose a Format");
-        setSize(220,150);
+        super("Subscriptions");
+        setSize(150,335);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
-        JLabel formatLabel = new JLabel("Output formats:");
-        panel.add(formatLabel);
-        panel.add(formatBox);
+        JLabel subLabel = new JLabel("RSS Subscriptions: ");
+        panel.add(subLabel);
+        subList.setVisibleRowCount(8);
+        JScrollPane scroller = new JScrollPane(subList);
+        panel.add(scroller);
+
         add(panel);
         setVisible(true);
     }
