@@ -6,6 +6,7 @@ public class Authenticator extends  javax.swing.JFrame{
     JTextField username = new JTextField(15);//navedena sirina
     JPasswordField password = new JPasswordField(15);
     JTextArea comments = new JTextArea(4,15);
+    JScrollPane scroll = new JScrollPane(comments, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
     JButton ok = new JButton("OK");
     JButton cancel = new JButton("Cancel");
 
@@ -18,6 +19,7 @@ public class Authenticator extends  javax.swing.JFrame{
         JLabel userameLabel = new JLabel("Username: ");
         JLabel passwordLabel = new JLabel("Paaword: ");
         JLabel commentLabel = new JLabel("Comments: ");
+
         comments.setLineWrap(true);
         comments.setWrapStyleWord(true);//uvrtdjuje sta ce preci u sledeci red- tenutna rec
         pane.add(userameLabel);
@@ -25,7 +27,7 @@ public class Authenticator extends  javax.swing.JFrame{
         pane.add(passwordLabel);
         pane.add(password);
         pane.add(commentLabel);
-        pane.add(comments);
+        pane.add(scroll);
         pane.add(ok);
         pane.add(cancel);
         add(pane);
