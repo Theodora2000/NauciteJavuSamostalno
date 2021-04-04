@@ -1,6 +1,5 @@
 package naucijavusamostalno;
 
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -17,6 +16,7 @@ public class FeedInfo extends JFrame {
         setSize(400,150);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLookAndFeel();
+
         String response1= JOptionPane.showInputDialog(null, "Enter the site name: ");
         name = new JTextField(response1,20);
 
